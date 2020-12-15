@@ -39,7 +39,7 @@
             <TextBox x:Name="txt_Ref" Text="{Binding Path=referencia}" Margin="10,5" Grid.Row="0" Grid.Column="1" VerticalContentAlignment="Center"/>
 
             <ComboBox x:Name="txt_Tipo" Text="{Binding Path=Tipo}" Margin="10,5" Grid.Row="1" Grid.Column="1" VerticalContentAlignment="Center">
-                <ComboBoxItem Content="ordenadores"/>
+                <ComboBoxItem Content="ordenadores" IsSelected="true"/>
                 <ComboBoxItem Content="tablets"/>
                 <ComboBoxItem Content="moviles"/>
             </ComboBox>

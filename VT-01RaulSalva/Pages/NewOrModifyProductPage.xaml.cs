@@ -55,6 +55,33 @@ namespace VT_01RaulSalva.Pages
 
         }
 
+        private bool Validation()
+        {
+
+            bool validate = true;
+
+            foreach (UIElement element in productoGrid.Children)
+            {
+
+                if (element is TextBox)
+                {
+                    TextBox textBox = (TextBox)element;
+
+                    if (textBox.Text.Equals(""))
+                    {
+                        textBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                        validate = false;
+                    }
+                    else
+                    {
+                        textBox.BorderBrush = new SolidColorBrush(Colors.LightGray);
+                    }
+                }
+
+            }
+
+            return validate;
+        } //validacion
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (verify)
@@ -63,18 +90,28 @@ namespace VT_01RaulSalva.Pages
             }
             else
             {
-                //String nombre = txt_Nombre.Text;
-                //String telefono = txt_Telefono.Text;
-                //DateTime fechaAlta = (DateTime)txt_fechaAlta.SelectedDate;
-                //User user = new User(nombre, telefono, fechaAlta);
-                productoHandler.AddProduct(producto);
+                String referencia = txt_Ref.Text;
+                String tipo = txt_Tipo.Text;
+
+                String marca = txt_Marca.Text;
+                String precio = txt_Precio.Text;
+                String stock = txt_Stock.Text;
+
+                DateTime fechaAlta = (DateTime)txt_fechaAlta.SelectedDate;
+                if(Validation())
+                {
+                    Producto producto = new Producto(referencia, tipo, marca, precio, stock, fechaAlta);
+                    productoHandler.AddProduct(producto);
+
+                    MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
+                    
+                }
+                
 
             }
-
-
-            MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
-
-
+            
         }
+
+        
     }
 }

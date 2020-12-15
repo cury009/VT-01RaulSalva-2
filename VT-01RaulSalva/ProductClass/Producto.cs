@@ -20,7 +20,17 @@ namespace VT_01RaulSalva.ProductClass
         this.stock = stock;
         this.fechaAlta = fechaAlta;
     }
-    public Producto()
+
+        public Producto(string referencia, string marca, string precio, string stock, DateTime fechaAlta)
+        {
+            this.referencia = referencia;
+            this.marca = marca;
+            this.precio = precio;
+            this.stock = stock;
+            this.fechaAlta = fechaAlta;
+        }
+
+        public Producto(string referencia)
     {
         this.referencia = "";
         this.Tipo = "";
@@ -30,7 +40,11 @@ namespace VT_01RaulSalva.ProductClass
         this.fechaAlta = DateTime.Now;
     }
 
-    public override string ToString()
+        public Producto()
+        {
+        }
+
+        public override string ToString()
     {
         return referencia;
     }

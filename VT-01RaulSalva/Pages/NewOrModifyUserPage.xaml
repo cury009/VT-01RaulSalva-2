@@ -36,6 +36,8 @@
 
         </Grid>
 
+        <Label x:Name="warning" Margin="0,30,0,0" Foreground="Red"/>
+
 
         <Button Margin="40" Content="ACEPTAR" Style="{StaticResource buttonStyle1}" Click="Button_Click"/>
 

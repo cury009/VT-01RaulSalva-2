@@ -49,6 +49,33 @@ namespace VT_01RaulSalva.Pages
 
         }
 
+        private bool Validation()
+        {
+
+            bool validate = true;
+
+            foreach (UIElement element in userGrid.Children)
+            {
+
+                if (element is TextBox)
+                {
+                    TextBox textBox = (TextBox)element;
+
+                    if (textBox.Text.Equals(""))
+                    {
+                        textBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                        validate = false;
+                    }
+                    else
+                    {
+                        textBox.BorderBrush = new SolidColorBrush(Colors.LightGray);
+                    }
+                }
+
+            }
+
+            return validate;
+        } //validacion
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if (verify)
@@ -57,16 +84,26 @@ namespace VT_01RaulSalva.Pages
             }
             else
             {
-                //String nombre = txt_Nombre.Text;
-                //String telefono = txt_Telefono.Text;
-                //DateTime fechaAlta = (DateTime)txt_fechaAlta.SelectedDate;
-                //User user = new User(nombre, telefono, fechaAlta);
-                usersHandler.AddUser(user);
+                String nombre = txt_Nombre.Text;
+                String telefono = txt_Telefono.Text;
+                DateTime fechaAlta = (DateTime)txt_fechaAlta.SelectedDate;
+                if(Validation())
+                {
+                    User user = new User(nombre, telefono, fechaAlta);
+                    usersHandler.AddUser(user);
+
+                    MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
+                }
+                else
+                {
+                    warning.Content = "ERROR, INTRODUCE LOS DATOS";
+                }
+                
 
             }
 
 
-            MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
+            
 
 
         }
