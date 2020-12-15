@@ -63,7 +63,7 @@ namespace VT_01RaulSalva.Pages
 
                     if (textBox.Text.Equals(""))
                     {
-                        textBox.BorderBrush = new SolidColorBrush(Colors.Red);
+                        textBox.BorderBrush = new SolidColorBrush(Colors.Blue);
                         validate = false;
                     }
                     else
@@ -81,6 +81,7 @@ namespace VT_01RaulSalva.Pages
             if (verify)
             {
                 usersHandler.ModifyUser(user, pos);
+                MainWindow.myNavigationFrame.NavigationService.Navigate(new MainPage());
             }
             else
             {

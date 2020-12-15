@@ -6,6 +6,7 @@
         <Setter Property="Height" Value="25"/>
         <Setter Property="FontSize" Value="12"/>
         <Setter Property="FontWeight" Value="DemiBold"/>
+        <Setter Property="Foreground" Value="White"/>
 
         <!--<Setter Property="Background" Value="Black"/>-->
         <Setter Property="Foreground" Value="red"/>
@@ -32,12 +33,17 @@
         </Setter>
     </Style>
 
+    
     <Style TargetType="TextBlock" x:Key="textBlockStyle1">
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="HorizontalAlignment" Value="Right"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="FontWeight" Value="DemiBold"/>
+        <Setter Property="Foreground" Value="Black"/>
+        
     </Style>
+   
+    
 
     <Style TargetType="TextBlock" x:Key="textBlockTitleStyle1">
         <Setter Property="FontSize" Value="22"/>
@@ -45,6 +51,7 @@
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="Margin" Value="25"/>
+        <Setter Property="Foreground" Value="White"/>
     </Style>
 
     <ImageBrush x:Key="background" ImageSource="/imagenes/mediamarkt.jpg" Stretch="Fill"/>

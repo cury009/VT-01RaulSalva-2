@@ -8,7 +8,7 @@
       d:DesignHeight="330" d:DesignWidth="570"
       Title="NewOrModifyUserPage">
 
-    <StackPanel Background="White">
+    <StackPanel Background="red">
         <StackPanel.Resources>
             <Style TargetType="TextBlock" BasedOn="{StaticResource textBlockStyle1}"/>
         </StackPanel.Resources>
@@ -36,7 +36,7 @@
 
         </Grid>
 
-        <Label x:Name="warning" Margin="0,30,0,0" Foreground="Red"/>
+        <Label x:Name="warning" Margin="0,30,0,0" Foreground="Blue" FontSize="24" FontWeight="Bold" HorizontalAlignment="Center" />
 
 
         <Button Margin="40" Content="ACEPTAR" Style="{StaticResource buttonStyle1}" Click="Button_Click"/>

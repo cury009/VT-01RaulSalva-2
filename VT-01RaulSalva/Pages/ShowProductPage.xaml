@@ -8,14 +8,14 @@
       d:DesignHeight="330" d:DesignWidth="570"
       Title="ShowProductPage">
 
-    <StackPanel Background="White">
+    <StackPanel Background="Red">
         <StackPanel.Resources>
             <Style TargetType="TextBlock" BasedOn="{StaticResource textBlockStyle1}"/>
             <Style TargetType="Button" BasedOn="{StaticResource buttonStyle1}"/>
         </StackPanel.Resources>
 
         <TextBlock Text="Consulta Producto" Style="{StaticResource textBlockTitleStyle1}"/>
-        <ComboBox x:Name="comboProduct" ItemsSource="{Binding Path=productoList}" Margin="0,-15" Width="200" SelectionChanged="comboProduct_SelectionChanged"/>
+        <ComboBox x:Name="comboProduct" ItemsSource="{Binding Path=productoList}" Width="200" SelectionChanged="comboProduct_SelectionChanged"/>
 
         <Grid x:Name="productDataGrid" Margin="0,10,0,0" Width="450">
             <Grid.ColumnDefinitions>
@@ -48,8 +48,8 @@
         </Grid>
 
         <StackPanel x:Name="buttonsPanel" Margin="10" Visibility="Visible" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="MODIFICAR" Background="Green" Click="Button_Click"/>
-            <Button Content="BORRAR" Background="Red" Click="Button_Click_1"/>
+            <Button Content="MODIFICAR" Background="White" Click="Button_Click"/>
+            <Button Content="BORRAR" Background="White" Click="Button_Click_1"/>
         </StackPanel>
     </StackPanel>
 </Page>

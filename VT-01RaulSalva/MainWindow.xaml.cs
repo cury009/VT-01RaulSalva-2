@@ -67,20 +67,20 @@ namespace VT_01RaulSalva
 
         private void Button_Click_7(object sender, RoutedEventArgs e)
         {
-            if (nuevoPanel.IsVisible)
+            if (subMenuNuevo.IsVisible)
             {
-                nuevoPanel.Visibility = Visibility.Hidden;
+                subMenuNuevo.Visibility = Visibility.Hidden;
             }
-            else { nuevoPanel.Visibility = Visibility.Visible; }
+            else { subMenuNuevo.Visibility = Visibility.Visible; }
         }
 
         private void Button_Click_8(object sender, RoutedEventArgs e)
         {
-            if (buscarPanel.IsVisible)
+            if (subMenuBuscar.IsVisible)
             {
-                buscarPanel.Visibility = Visibility.Hidden;
+                subMenuBuscar.Visibility = Visibility.Hidden;
             }
-            else { buscarPanel.Visibility = Visibility.Visible; }
+            else { subMenuBuscar.Visibility = Visibility.Visible; }
         }
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
