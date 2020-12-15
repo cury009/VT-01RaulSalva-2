@@ -47,9 +47,9 @@
 
         </Grid>
 
-        <StackPanel x:Name="buttonsPanel" Margin="10" Visibility="Visible" Orientation="Horizontal" HorizontalAlignment="Center">
-            <Button Content="MODIFICAR" Background="White" Click="Button_Click"/>
-            <Button Content="BORRAR" Background="White" Click="Button_Click_1"/>
+        <StackPanel x:Name="buttonsPanel"   Margin="10" Visibility="Visible" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="MODIFICAR" Style="{StaticResource buttonStyle1}" Background="White" Click="Button_Click"/>
+            <Button Content="BORRAR"  Style="{StaticResource buttonStyle1}" Background="White" Click="Button_Click_1"/>
         </StackPanel>
     </StackPanel>
 </Page>

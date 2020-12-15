@@ -9,7 +9,7 @@
         <Setter Property="Foreground" Value="White"/>
 
         <!--<Setter Property="Background" Value="Black"/>-->
-        <Setter Property="Foreground" Value="red"/>
+        <Setter Property="Foreground" Value="Black"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Background">
             <Setter.Value>
@@ -17,21 +17,7 @@
             </Setter.Value>
         </Setter>
     </Style>
-    <Style TargetType="Button" x:Key="buttonStyle2">
-        <Setter Property="Width" Value="130"/>
-        <Setter Property="Height" Value="25"/>
-        <Setter Property="FontSize" Value="12"/>
-        <Setter Property="FontWeight" Value="DemiBold"/>
-
-        <!--<Setter Property="Background" Value="Black"/>-->
-        <Setter Property="Foreground" Value="red"/>
-        <Setter Property="HorizontalAlignment" Value="Center"/>
-        <Setter Property="Background">
-            <Setter.Value>
-                <ImageBrush ImageSource="/imagenes/boton.png" Stretch="UniformToFill" TileMode="None"/>
-            </Setter.Value>
-        </Setter>
-    </Style>
+    
 
     
     <Style TargetType="TextBlock" x:Key="textBlockStyle1">
